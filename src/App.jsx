@@ -1,13 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [lang, setLang] = useState("DE");
 
-  return <>App</>;
+  return (
+    <>
+      <Navbar lang={lang} setLang={setLang} />
+      <Hero lang={lang} />
+    </>
+  );
 }
 
 export default App;
