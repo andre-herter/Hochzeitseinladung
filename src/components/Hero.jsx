@@ -45,7 +45,6 @@ export default function Hero({ lang }) {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src="src/assets/img/hero.jpg"
@@ -117,7 +116,7 @@ export default function Hero({ lang }) {
             className={`${base} ${step >= 7 ? show : ""} flex flex-col items-center gap-2 text-gray-500 hover:text-red-800 transition-colors cursor-pointer pb-4`}
             onClick={scrollToSection}
           >
-            <span className="font-cinzel text-xs tracking-[0.3em]">
+            <span className="mt-8 font-cinzel text-xs tracking-[0.3em]">
               {t.scroll}
             </span>
 
