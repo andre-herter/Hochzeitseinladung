@@ -171,8 +171,10 @@ export default function SaveTheDate({ lang }) {
             <p className="font-cinzel text-sm tracking-[0.2em] text-gray-500 mb-2">
               {t.place}
             </p>
-            <p className="font-playfair text-lg text-white">Biggeseehalle</p>
-            <p className="font-playfair text-sm text-gray-500">Sondern</p>
+            <p className="font-playfair text-lg text-white">
+              Schloss Ehreshoven
+            </p>
+            <p className="font-playfair text-sm text-gray-500">Engelskirchen</p>
           </div>
         </div>
       </div>
