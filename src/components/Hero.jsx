@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import heroImg from "../assets/img/hero.jpg";
 
 export default function Hero({ lang }) {
   const [step, setStep] = useState(0);
@@ -47,7 +48,7 @@ export default function Hero({ lang }) {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="src/assets/img/hero.jpg"
+          src={heroImg}
           alt="Angelika und Philipp"
           className="w-full h-full object-cover object-[center_10%] md:scale-100 scale-110"
         />

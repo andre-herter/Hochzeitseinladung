@@ -1,3 +1,5 @@
+import locationImg from "../assets/img/location.jpg";
+
 export default function Location({ lang }) {
   const translations = {
     DE: {
@@ -37,7 +39,7 @@ export default function Location({ lang }) {
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="src\assets\img\location.jpg"
+          src={locationImg}
           alt="Lago Event Park"
           className="w-full h-full object-cover"
         />
@@ -71,9 +73,11 @@ export default function Location({ lang }) {
 
           <div className="flex items-center justify-center gap-4">
             <span className="w-16 h-px bg-linear-to-r from-transparent to-gray-500" />
+
             <h2 className="font-cinzel text-3xl md:text-4xl tracking-[0.2em] text-white">
               {t.title}
             </h2>
+
             <span className="w-16 h-px bg-linear-to-l from-transparent to-gray-500" />
           </div>
         </div>
@@ -83,8 +87,9 @@ export default function Location({ lang }) {
             <h3 className="font-cinzel text-2xl md:text-3xl text-white tracking-[0.15em] mb-2">
               Schloss Ehreshoven
             </h3>
+
             <p className="font-playfair text-lg text-gray-300">
-              Regierungsbezirk Köln , Engelskirchen
+              Regierungsbezirk Köln, Engelskirchen
             </p>
           </div>
 
@@ -111,7 +116,9 @@ export default function Location({ lang }) {
               <p className="font-cinzel text-sm tracking-[0.2em] text-gray-400 mb-1">
                 ADRESSE
               </p>
+
               <p className="font-playfair text-white">{t.street}</p>
+
               <p className="font-playfair text-gray-300">{t.city}</p>
             </div>
           </div>
@@ -122,6 +129,7 @@ export default function Location({ lang }) {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* BY CAR */}
               <div className="flex items-start gap-4 p-4 border border-white/10 bg-black/40 backdrop-blur-sm rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -130,23 +138,28 @@ export default function Location({ lang }) {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-car w-5 h-5 text-red-800 mt-0.5"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-car w-5 h-5 text-red-800 mt-0.5"
                   aria-hidden="true"
                 >
-                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
-                  <circle cx="7" cy="17" r="2"></circle>
-                  <path d="M9 17h6"></path>
-                  <circle cx="17" cy="17" r="2"></circle>
+                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                  <circle cx="7" cy="17" r="2" />
+                  <path d="M9 17h6" />
+                  <circle cx="17" cy="17" r="2" />
                 </svg>
-                <p className="text-white">
-                  {t.bycar}
-                  <p class="text-sm text-gray-400">Lorem ipsum dolor sit.</p>
-                </p>
+
+                <div>
+                  <p className="text-white">{t.bycar}</p>
+
+                  <p className="text-sm text-gray-400">
+                    Lorem ipsum dolor sit.
+                  </p>
+                </div>
               </div>
 
+              {/* BY TAXI */}
               <div className="flex items-start gap-4 p-4 border border-white/10 bg-black/40 backdrop-blur-sm rounded-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,10 +168,10 @@ export default function Location({ lang }) {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-car w-5 h-5 text-red-800 mt-0.5"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-car w-5 h-5 text-red-800 mt-0.5"
                 >
                   <path d="M10 2h4" />
                   <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8" />
@@ -168,10 +181,12 @@ export default function Location({ lang }) {
                   <path d="M5 18v2" />
                   <path d="M19 18v2" />
                 </svg>
-                <p className="text-white">
-                  {t.bytaxi}
-                  <p class="text-sm text-gray-400">Lorem, ipsum dolor.</p>
-                </p>
+
+                <div>
+                  <p className="text-white">{t.bytaxi}</p>
+
+                  <p className="text-sm text-gray-400">Lorem, ipsum dolor.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -189,14 +204,15 @@ export default function Location({ lang }) {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-navigation w-4 h-4"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-navigation w-4 h-4"
               aria-hidden="true"
             >
-              <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+              <polygon points="3 11 22 2 13 21 11 13 3 11" />
             </svg>
+
             <span className="font-cinzel text-xs tracking-[0.2em]">
               {t.getDirections}
             </span>
@@ -206,6 +222,7 @@ export default function Location({ lang }) {
         <div className="mt-16 flex items-center justify-center">
           <div className="flex items-center gap-4">
             <span className="w-24 h-px bg-linear-to-r from-transparent to-gray-500" />
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -221,6 +238,7 @@ export default function Location({ lang }) {
               <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
               <circle cx="12" cy="10" r="3" />
             </svg>
+
             <span className="w-24 h-px bg-linear-to-l from-transparent to-gray-500" />
           </div>
         </div>

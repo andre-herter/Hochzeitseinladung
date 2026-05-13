@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { useState } from "react";
 import SaveTheDate from "./components/SaveTheDate";
 import Location from "./components/Location";
+import Dresscode from "./components/Dresscode";
 
 function App() {
   const [lang, setLang] = useState("DE");
@@ -14,6 +15,7 @@ function App() {
       <Hero lang={lang} />
       <SaveTheDate lang={lang} />
       <Location lang={lang} />
+      <Dresscode lang={lang} />
     </>
   );
 }
